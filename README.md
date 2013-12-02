@@ -30,4 +30,4 @@ me &rarr; `1PDnYMaRPW6cTp1VKLLD1jrymhSykEjDzM`
 
 License
 ---
-**IamFeelingLucky** is available under the [WTFPL](http://sam.zoy.org/wtfpl/ "WTFPL") license. See the LICENSE file for more info.
+**IamFeelingLucky** is available under the [WTFPL](http://www.wtfpl.net/txt/copying/ "WTFPL") license. See the LICENSE file for more info.
