@@ -61,7 +61,7 @@
 		var lines = pre.innerHTML.split('\n'), c = list.length;
 		for(i=lines.length;i--;) {
 			var line = lines[i];
-			if(!line.length || line.charAt(0)==='<') {
+			if(!line.length || line.indexOf('<strong>')===0) {
 				continue;
 			}
 			var adr = list.item(--c).text, d = al[adr], tf = d[0], tx = d[1], tag = tf>0 ? 'b' : 'i';
