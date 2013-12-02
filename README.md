@@ -23,6 +23,11 @@ Usage
 3. ...
 4. PROFIT!
 
+Donate
+---
+directory.io &rarr; `1Bv8dN7pemC5N3urfMDdAFReibefrBqCaK`  
+me &rarr; `1PDnYMaRPW6cTp1VKLLD1jrymhSykEjDzM`
+
 License
 ---
 **IamFeelingLucky** is available under the [WTFPL](http://sam.zoy.org/wtfpl/ "WTFPL") license. See the LICENSE file for more info.
