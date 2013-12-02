@@ -29,7 +29,7 @@
 			}
 		}
 	} while(!valid);
-	h1.innerHTML += ' <a href="/'+page+'">[Random Page]</a>';
+	h1.innerHTML += ' <a href="/'+page+'" id="random">[Random Page]</a>';
 
 	// check wallets
 	if(!list.length) {
@@ -59,13 +59,16 @@
 		}
 		var pre = document.querySelector('.keys');
 		var lines = pre.innerHTML.split('\n'), c = list.length;
-		for(i=lines.length;i--;) {
-			var line = lines[i];
-			if(!line.length || line.charAt(0)==='<') {
-				continue;
-			}
-			var adr = list.item(--c).text, d = al[adr], tf = d[0], tx = d[1], tag = tf>0 ? 'b' : 'i';
-			lines[i] += '\t\t<'+tag+'>'+(tf>0 ? (tf/100000000).toFixed(8).replace(/\.?0+$/g,'') : 0)+'\t\t['+tx+']</'+tag+'>';
+		var bingo = false;
+		for(i= list.length; i--;) {
+			var line = list[i].innerHTML, adr = list.item(i).text, d = al[adr], tf = d[0], tx = d[1], tag = tf>0 ? 'b' : 'i';;
+			lines[i+1] += '\t\t<'+tag+'>'+(tf>0 ? (tf/100000000).toFixed(8).replace(/\.?0+$/g,'') : 0)+'\t\t['+tx+']  ('+adr+')</'+tag+'>';
+      			if (tf > 0) bingo = true;
+		}
+		if (bingo) {
+			alert('Bingo');
+		 } else {
+		 	document.getElementById("random").click();
 		}
 		pre.innerHTML = lines.join('\n');
 		console.debug('IamFeelingLucky update complete');
